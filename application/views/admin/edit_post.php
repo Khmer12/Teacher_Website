@@ -24,7 +24,7 @@
 												$cat_id = $row->cat_id;		
 									?>
                    <div class="box-body">
-							<form action="../../post/edit_post/<?php echo $post_id;?>" class="form-horizontal" role="form" enctype="multipart/form-data" method="post">
+							<form action="<?php echo site_url();?>/post/edit_post/<?php echo $post_id;?>" class="form-horizontal" role="form" enctype="multipart/form-data" method="post">
 									
 									
 									<div class="form-group">
@@ -62,7 +62,8 @@
 										<label for="post_image" class="col-sm-1 control-label">Image</label>
 										<div class="col-sm-11">
 										<img style="width:200px;height:200px;" id="image" src="<?php echo base_url()."upload/".$post_image;?>"/> 
-										<input id="file" type="file" class="form-control" id="post_image" name="post_image" value="<?php echo base_url()."upload/".$post_image;?>">
+										<input type="hidden" id="post_hidden" name="post_hidden" value="<?php echo $post_image;?>"/>
+										<input type="file" class="form-control" id="post_image" name="post_image" value="<?php echo $post_image;?>">
 										</div>
 									</div>
 
@@ -81,11 +82,22 @@
 	</div>              
  </div>
  <script>
- 	var post_date = "<?php echo $post_date;?>";
- 	//alert(post_date);
- 	$('#post_date').val(post_date);
- 	$('#file').change(function(){
- 		$('#image').attr('src',$(this).val());
+ 	$(function(){
+ 		var post_date = "<?php echo $post_date;?>";
+	 	var post_image ="<?php echo $post_image;?>";
+	 	$('#datepicker').val(post_date);
+	 	//$('#datepicker').datepicker("setDate", new Date("<?php echo $post_date;?>") );
+	 	alert(post_date);
+	 	//$('#post_image').val(post_image);
+	 	$('#post_image').change(function(){
+	 		$('#image').attr('display','none');
+	 		//$('#image').attr('src',$(this).val());
+	 	});
+	 	var file = $('#post_image')[0].files[0]
+		if(file){
+ 		alert(file.name);
+}
  	});
+ 	
  </script>
 

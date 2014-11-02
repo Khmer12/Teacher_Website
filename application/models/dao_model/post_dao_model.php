@@ -27,6 +27,8 @@ class Post_dao_model extends CI_Model{
 	}
 
 	public function edit_post(Post_dto_model $post){
+		//echo "<script>alert($post->get_post_created());</script>";
+		echo $post->get_post_created();
 		$data = array(
 			"post_title" => $post->get_post_title(),
 			"post_content" => $post->get_post_content(),

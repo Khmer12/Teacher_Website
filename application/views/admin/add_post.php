@@ -14,7 +14,7 @@
                       <h3>Form Posts</h3>
                    </div>
                    <div class="box-body">
-							<form action="../post/add_new_post" class="form-horizontal" role="form" enctype="multipart/form-data" method="post">
+							<form action="<?php echo site_url();?>/post/add_new_post" class="form-horizontal" role="form" enctype="multipart/form-data" method="post">
 									
 									<!-- Text input -->
 									<div class="form-group">

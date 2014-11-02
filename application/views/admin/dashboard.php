@@ -80,7 +80,7 @@
 	<body class="fixed">
         <!-- Header -->
         <header>
-			<a href="../admin/home" class="logo"><i class="fa fa-bolt"></i> <span>Maniac</span></a>
+			<a href="<?php echo site_url();?>/admin/home" class="logo"><i class="fa fa-bolt"></i> <span>Maniac</span></a>
             <nav class="navbar navbar-static-top">
                 <a href="#" class="navbar-btn sidebar-toggle">
                     <span class="sr-only">Toggle navigation</span>
@@ -91,7 +91,7 @@
 				<div class="navbar-header">
                     <form role="search" class="navbar-form" method="post" action="#">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search..."/>
+                            <input type="text" class="form-control" placeholder="Search<?php echo site_url();?>."/>
                             <span class="input-group-btn">
                                 <button type="submit" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
                             </span>
@@ -147,7 +147,7 @@
                                             <a href="#">
                                                 <div class="pull-left"><img src="img/avatar3.jpg" class="img-rounded" alt="image"/></div>
                                                 <h4>Jeremy Doe<small><i class="fa fa-clock-o"></i> 30 mins</small></h4>
-                                                <p>Don't forget to subscribe to...</p>
+                                                <p>Don't forget to subscribe to<?php echo site_url();?>.</p>
                                             </a>
                                         </li>
 										
@@ -254,7 +254,7 @@
                     <ul class="sidebar-menu">
 						<li class="title">Navigation</li>
                         <li class="active">
-                            <a href="../admin/home">
+                            <a href="<?php echo site_url();?>/admin/home">
                                 <i class="fa fa-home"></i> <span>Dashboard</span>
                             </a>
                         </li>
@@ -265,8 +265,8 @@
                                 <i class="fa fa-angle-right pull-right"></i>
                             </a>
                             <ul class="sub-menu">
-                                <li><a href="../admin/all_user">All users</a></li>
-                                <li><a href="../admin/add_user">Add user</a></li>
+                                <li><a href="<?php echo site_url();?>/admin/all_user">All users</a></li>
+                                <li><a href="<?php echo site_url();?>/admin/add_user">Add user</a></li>
                             </ul>
                         </li>
                         
@@ -277,8 +277,8 @@
                                 <i class="fa fa-angle-right pull-right"></i>
                             </a>
                             <ul class="sub-menu">
-                                <li><a href="../admin/all_posts">All posts</a></li>
-                                <li><a href="../admin/add_post">Add new post</a></li>
+                                <li><a href="<?php echo site_url();?>/admin/all_posts">All posts</a></li>
+                                <li><a href="<?php echo site_url();?>/admin/add_post">Add new post</a></li>
                             </ul>
                         </li>
                         
@@ -289,8 +289,8 @@
                                 <i class="fa fa-angle-right pull-right"></i>
                             </a>
                             <ul class="sub-menu">
-                                <li><a href="../admin/all_categories">All categories</a></li>
-                                <li><a href="../admin/add_category">Add new category</a></li>
+                                <li><a href="<?php echo site_url();?>/admin/all_categories">All categories</a></li>
+                                <li><a href="<?php echo site_url();?>/admin/add_category">Add new category</a></li>
                             </ul>
                         </li>
                         
@@ -301,8 +301,8 @@
                                 <i class="fa fa-angle-right pull-right"></i>
                             </a>
                             <ul class="sub-menu">
-                                <li><a href="../admin/all_advertise"">All Advertise</a></li>
-                                <li><a href="../admin/add_advertise">Add Advertise</a></li>
+                                <li><a href="<?php echo site_url();?>/admin/all_advertise">All Advertise</a></li>
+                                <li><a href="<?php echo site_url();?>/admin/add_advertise">Add Advertise</a></li>
                             </ul>
                         </li>
                         
