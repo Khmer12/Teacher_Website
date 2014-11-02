@@ -26,11 +26,21 @@ Class Admin extends CI_Controller{
 		$this->load->view("admin/dashboard");
 	}
 	public function all_posts(){
+		/*$this->load->library('pagination');
+
+		$config['base_url'] = site_url().'/admin/all_posts/';
+		$config['total_rows'] = 200;
+		$config['per_page'] = 20; 
+*/
+		//$this->pagination->initialize($config); 
+
+		
 		$data=array();
 		$this->load->model('dao_model/post_dao_model');
 		$data['result']= $this->post_dao_model->get_all_posts();
 		if($data){
 			$this->load->view('admin/dashboard',$data);
+			//echo $this->pagination->create_links();
 		}else {
 			echo " data not found";
 		}	

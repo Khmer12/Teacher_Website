@@ -96,4 +96,8 @@ class Post extends CI_Controller{
 			echo "You have not been deleted!!!";
 		}
 	}
+
+	public function test(){
+		
+	}
 }
