@@ -87,7 +87,7 @@
 	 	var post_image ="<?php echo $post_image;?>";
 	 	$('#datepicker').val(post_date);
 	 	//$('#datepicker').datepicker("setDate", new Date("<?php echo $post_date;?>") );
-	 	alert(post_date);
+	 	//alert(post_date);
 	 	//$('#post_image').val(post_image);
 	 	$('#post_image').change(function(){
 	 		$('#image').attr('display','none');
