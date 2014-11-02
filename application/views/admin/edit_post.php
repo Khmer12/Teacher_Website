@@ -93,9 +93,9 @@
 	 		$('#image').attr('display','none');
 	 		//$('#image').attr('src',$(this).val());
 	 	});
-	 	var file = $('#post_image')[0].files[0]
-		if(file){
- 		alert(file.name);
+	 // 	var file = $('#post_image')[0].files[0]
+		// if(file){
+ 	// 	alert(file.name);
 }
  	});
  	

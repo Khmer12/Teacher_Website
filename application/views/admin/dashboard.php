@@ -91,7 +91,7 @@
 				<div class="navbar-header">
                     <form role="search" class="navbar-form" method="post" action="#">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search<?php echo site_url();?>."/>
+                            <input type="text" class="form-control" placeholder="Search..."/>
                             <span class="input-group-btn">
                                 <button type="submit" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
                             </span>
@@ -147,7 +147,7 @@
                                             <a href="#">
                                                 <div class="pull-left"><img src="img/avatar3.jpg" class="img-rounded" alt="image"/></div>
                                                 <h4>Jeremy Doe<small><i class="fa fa-clock-o"></i> 30 mins</small></h4>
-                                                <p>Don't forget to subscribe to<?php echo site_url();?>.</p>
+                                                <p>Don't forget to subscribe to...</p>
                                             </a>
                                         </li>
 										

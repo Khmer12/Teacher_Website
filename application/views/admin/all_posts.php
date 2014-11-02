@@ -41,13 +41,13 @@
 													<img style="width:50px; height:50px" src="<?php echo base_url();?>upload/<?php echo $row->post_image;?>"/>
 												</td>
 											<td>
-												<a class="btn btn-success btn-sm" href="table.php#">
+												<a class="btn btn-success btn-sm" href="">
 													<i class="fa fa-search-plus "></i>  
 												</a>
 												<a class="btn btn-info btn-sm" href="edit_post/<?php echo $row->post_id;?>">
 													<i class="fa fa-edit "></i>  
 												</a>
-												<a class="btn btn-danger btn-sm" href="table.php#">
+												<a class="btn btn-danger btn-sm" href="<?php echo site_url();?>/post/delete_post/<?php echo $row->post_id?>">
 													<i class="fa fa-trash-o "></i> 
 												</a>
 											</td>

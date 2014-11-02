@@ -46,10 +46,6 @@ class Post_dao_model extends CI_Model{
 		}
 	}
 
-	public function delete_post_by_id($post_id){
-
-	}
-
 	public function get_all_posts(){
 		$this->db->select('post_id,post_title,cat_id,user_id,post_image,post_content,post_date');                
         $this->db->from('tbpost');
@@ -71,21 +67,11 @@ class Post_dao_model extends CI_Model{
 		}
 	}
 
-	// public function edit_post($post){
-	// 	$data = array(
-	// 				'post_title' =>$post->get_post_title(),
-	// 				'post_date' => $post->get_post_created(),
-	// 				'post_content' => $post->get_post_content(),
-	// 				'post_image' => $post->get_post_image(),
-	// 				'cat_id' => $post->get_category_id()
-	// 	);
-	// 	$this->db->where('post_id', $post->get_post_id();
-	// 	$result=$this->db->update('tbpost', $data);
-	// 	if($result){
-	// 		return true;
-	// 	}else{
-	// 		return false;
-	// 	}
-	// }
+	public function delete_post_by_id($post_id)
+	{
+		$this->db->where('post_id', $post_id);
+		$result = $this->db->delete('tbpost');
+		return $result;
+	}
 
 }

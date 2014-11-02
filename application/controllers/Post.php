@@ -87,4 +87,13 @@ class Post extends CI_Controller{
 			}
   		}
 	}
+
+	public function delete_post($post_id){
+		if($this->post_dao_model->delete_post_by_id($post_id)){
+			echo "You have been deleted successfully!!!";
+			redirect('admin/all_posts', 'refresh');	
+		}else{
+			echo "You have not been deleted!!!";
+		}
+	}
 }
