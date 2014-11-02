@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/Teacher_website_master';
+$config['base_url']	= 'http://localhost/Teacher_website';
 
 /*
 |--------------------------------------------------------------------------

@@ -21,28 +21,60 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+        <script src="<?=base_url()?>/admin/js/jquery-1.11.1.min.js"></script>
+        <script src="<?=base_url()?>/admin/js/jquery-ui.min.js"></script>
         
-         <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-			
-			<script type="text/javascript">
-			tinymce.init({
-			    selector: "textarea",
-			    theme: "modern",
-			    plugins: [
-			        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
-			        "searchreplace wordcount visualblocks visualchars code fullscreen",
-			        "insertdatetime media nonbreaking save table contextmenu directionality",
-			        "emoticons template paste textcolor colorpicker textpattern"
-			    ],
-			    toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-			    toolbar2: "print preview media | forecolor backcolor emoticons",
-			    image_advtab: true,
-			    templates: [
-			        {title: 'Test template 1', content: 'Test 1'},
-			        {title: 'Test template 2', content: 'Test 2'}
-			    ]
-			});
-			</script>
+        <script>
+            $(function() {
+                $( "#datepicker" ).datepicker();
+                $( "#datepicker" ).datepicker( "option", "showAnim", "drop" );
+                $( "#datepicker" ).datepicker( "option", "dateFormat", "yy/mm/dd" );
+            });
+        </script>
+        
+        <script src="<?=base_url()?>/admin/js/plugins/tinymce/tinymce.min.js"></script>
+            
+            <script type="text/javascript">
+            /*tinymce.init({
+                selector: "textarea",
+                theme: "modern",
+                plugins: [
+                    "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                    "searchreplace wordcount visualblocks visualchars code fullscreen",
+                    "insertdatetime media nonbreaking save table contextmenu directionality",
+                    "emoticons template paste textcolor colorpicker textpattern"
+                ],
+                toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+                toolbar2: "print preview media | forecolor backcolor emoticons",
+                image_advtab: true,
+
+                templates: [
+                    {title: 'Test template 1', content: 'Test 1'},
+                    {title: 'Test template 2', content: 'Test 2'}
+                ]
+
+                
+            });*/
+            tinymce.init({
+                selector: "textarea",theme: "modern", height:300,
+                plugins: [
+                    "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+                    "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+                    "table contextmenu directionality emoticons paste textcolor responsivefilemanager"
+                ],
+                toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+                toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+                image_advtab: true ,
+
+                
+                external_filemanager_path:"<?=base_url()?>/filemanager/",
+                filemanager_title:"Filemanager" ,
+                relative_urls : false,
+                convert_urls: false,
+                external_plugins: { "filemanager" : "<?=base_url()?>/filemanager/plugin.min.js"}
+            });
+            </script>
         
 	</head>
 	<body class="fixed">
@@ -97,7 +129,7 @@
                                     <ul>
                                         <li>
                                             <a href="#">
-                                                <div class="pull-left"><img src="img/avatar2.jpg" class="img-rounded" alt="image"/></div>
+                                                <div class="pull-left"><img src="/admin/img/avatar2.jpg" class="img-rounded" alt="image"/></div>
                                                 <h4>Jill Doe<small><i class="fa fa-clock-o"></i> 1 mins</small></h4>
                                                 <p>Can we meet somewhere?</p>
                                             </a>
@@ -105,7 +137,7 @@
 										
                                         <li>
                                             <a href="#">
-                                                <div class="pull-left"><img src="img/avatar.jpg" class="img-rounded" alt="image"/></div>
+                                                <div class="pull-left"><img src="<?php echo base_url()?>admin/img/avatar.jpg" class="img-rounded" alt="image"/></div>
                                                 <h4>John Doe<small><i class="fa fa-clock-o"></i> 2 mins</small></h4>
                                                 <p>Please send me a new email.</p>
                                             </a>
@@ -182,7 +214,7 @@
 						
                         <li class="dropdown widget-user">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								<img src="img/avatar.jpg" class="pull-left" alt="image" />
+								<img src="<?php echo base_url()?>admin/img/avatar.jpg" class="pull-left" alt="image" />
                                 <span>John Doe <i class="fa fa-caret-down"></i></span>
                             </a>
                             <ul class="dropdown-menu">
@@ -209,7 +241,7 @@
                 <div class="sidebar">
                     <div class="user-box">
                         <div class="avatar">
-                            <img src="img/avatar.jpg" alt="" />
+                            <img src="<?php echo base_url()?>admin/img/avatar.jpg" alt="" />
                         </div>
                         <div class="details">
                             <p>John Doe</p>
